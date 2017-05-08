@@ -1,0 +1,220 @@
+@import "_couleurs.scss";
+@import "compass/css3/flexbox";
+
+
+#graphique{
+	@include flexbox((
+		display: box,
+		box-orient: horizontal,
+		box-pack: justify,
+		box-align: start
+	), $version: 1);
+	@include flexbox((
+		display: flexbox,
+		flex-direction: row,
+		flex-pack: justify,
+		flex-align: start
+	), $version: 2);
+	@include flexbox((
+		display: flex,
+		flex-direction: row,
+		justify-content: space-between,
+		align-items: flex-start
+	));
+	
+	#zone_nav{
+		width: 300px;
+		@include flexbox((
+			display: box,
+			box-orient: vertical,
+			box-pack: justify,
+			box-align: center
+		), $version: 1);
+		@include flexbox((
+			display: flexbox,
+			flex-direction: column,
+			flex-pack: justify,
+			flex-align: center
+		), $version: 2);
+		@include flexbox((
+			display: flex,
+			flex-direction: column,
+			justify-content: space-between,
+			align-items: center
+		));
+		
+		#icone_graphique{
+			margin: 100px 0px 20px 0px;
+			@include flexbox((
+				display: box,
+				box-orient: horizontal,
+				box-pack: justify,
+				box-align: center
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: row,
+				flex-pack: justify,
+				flex-align: center
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: row,
+				justify-content: space-between,
+				align-items: center
+			));
+			
+			.logo_graphique{
+				width: 50px;
+				height: 50px;
+				cursor: pointer;
+				margin: 0px 20px 0px 20px;
+				border-radius: 2px;
+				border: #ffffff 1px solid;
+				
+				&:hover {
+					background: $colorBackground;
+					border-radius: 2px;
+					border: $colorLegende 1px solid;
+				}
+				
+				.svg-logo_graphique{
+					stroke: $colorLegende;
+					fill: $colorLegende;
+				}
+			}
+			
+			.select_graph{
+				background: $colorBackground;
+				border-radius: 2px;
+				border: $colorLegende 1px solid;
+			}
+		}
+		
+		#legende_graphique{
+			margin: 20px 0px 0px 0px;
+			padding: 0px;
+			@include flexbox((
+				display: box,
+				box-orient: vertical,
+				box-pack: justify,
+				box-align: start
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: column,
+				flex-pack: justify,
+				flex-align: start
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: column,
+				justify-content: space-between,
+				align-items: flex-start
+			));
+			
+			.item_legende{
+				cursor: pointer;
+				list-style-type: none; /* on annule la puce par défaut */
+				@include flexbox((
+					display: box,
+					box-orient: horizontal,
+					box-pack: justify,
+					box-align: center
+				), $version: 1);
+				@include flexbox((
+					display: flexbox,
+					flex-direction: row,
+					flex-pack: justify,
+					flex-align: center
+				), $version: 2);
+				@include flexbox((
+					display: flex,
+					flex-direction: row,
+					justify-content: space-between,
+					align-items: center
+				));
+				.logo_legende{
+					margin: 10px;
+					height: 20px;
+					width: 20px;
+					position: relative;
+					.svg-logo_legende{
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						right: 0px;
+						height: 100%;
+						width: 100%;
+					}
+				}
+				.titre_legende{
+					font-size: 0.8em;
+					margin: 10px;
+				}
+			}
+		}
+	}
+	
+	#zone_graphique{
+		@include flexbox((
+			flex-grow: 1
+		), $version: 1);
+		@include flexbox((
+			flex-grow: 1
+		), $version: 2);
+		@include flexbox((
+			flex-grow: 1
+		));
+		#histogramme{
+			svg{
+				display: block;
+				margin: auto;
+				.produit_fonct{
+					fill: #d9c7ed;
+				}
+				.produit_invest{
+					fill: #bbe7d6;
+				}
+				.charge_fonct{
+					fill: #fcc096;
+				}
+				.charge_invest{
+					fill: #fcedb6;
+				}
+				.texte_comptes
+				{
+					fill: $colorPolice;
+				}
+				.axe{
+					.domain{
+						stroke: none;
+					}
+					.tick{
+						line{
+							stroke: $colorLignes;
+							shape-rendering: crispEdges;
+						}
+						text{
+							fill: $colorLegende;
+						}
+					}
+				}
+				.graph_comment{
+					fill: #ffffff;
+					stroke: $colorLegende;
+					display: none;
+				}
+				.texte_comment{
+					fill: $colorLegende;
+					font-size: 13px;
+					display: none;
+				}
+			}
+		}
+		
+		#courbe{
+			
+		}
+	}
+}

@@ -1,0 +1,227 @@
+@import "_couleurs.scss";
+@import "compass/css3/flexbox";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+#item_section{
+	@include flexbox((
+		display: box,
+		box-orient: horizontal,
+		box-pack: justify,
+		box-align: start
+	), $version: 1);
+	@include flexbox((
+		display: flexbox,
+		flex-direction: row,
+		flex-pack: justify,
+		flex-align: start
+	), $version: 2);
+	@include flexbox((
+		display: flex,
+		flex-direction: row,
+		justify-content: space-between,
+		align-items: flex-start
+	));
+	margin: 1em 1em 1em 1em;
+	padding: 0px;
+	
+	nav{
+		#item_colloc{
+			h1{
+			text-align: center;
+			font-size : 1.2em;
+			color: $colorTheme;
+			}
+		}
+		.item_menu{
+			width: 300px;
+			background: $colorBackground;
+			padding: 20px;
+			@include flexbox((
+				display: box,
+				box-orient: vertical,
+				box-pack: justify,
+				box-align: start
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: column,
+				flex-pack: justify,
+				flex-align: start
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: column,
+				justify-content: space-between,
+				align-items: flex-start
+			));
+			.item_category{
+				margin: 20px;
+				padding: 0px;
+				list-style-type: none; /* on annule la puce par défaut */
+				@include flexbox((
+					display: box,
+					box-orient: horizontal,
+					box-pack: center,
+					box-align: center
+				), $version: 1);
+				@include flexbox((
+					display: flexbox,
+					flex-direction: row,
+					flex-pack: center,
+					flex-align: center
+				), $version: 2);
+				@include flexbox((
+					display: flex,
+					flex-direction: row,
+					justify-content: center,
+					align-items: center
+				));
+				
+				.logo_croix{
+					height: 12px;
+					width: 12px;
+					position: relative;
+					cursor: pointer;
+					@include transition-property(transform);
+					@include transition-duration(0.7s);
+					
+					&:hover{
+						@include transform(matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0));
+					}
+					/*matrix(0,-0.05932203,0.05932203,0,3.3885919,24.566556) - croix tournée*/
+					/*matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574) - croix droite*/
+						
+					.svg-logo_croix {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						right: 0px;
+						height: 100%;
+						width: 100%;
+						fill: $colorTheme;
+					}
+				}
+				
+				.croix_tourne{
+					@include transition-property(transform);
+					@include transition-duration(0.7s);
+					@include transform(matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0));
+					&:hover{
+						@include transform(matrix(0,1,-1,0,0,0));
+					}
+				}
+				
+				.titre_tab{
+					margin-left: 10px;
+					cursor: pointer;
+					color: $colorTheme;
+					border-bottom: 1px solid $colorBackground;
+					@include transition-property(border-bottom);
+					@include transition-duration(0.5s);
+				}
+				
+				.select_tab{
+					border-bottom: 1px solid $colorTheme;
+				}
+			}
+			
+			.item_submenu{
+				@include flexbox((
+					display: box,
+					box-orient: vertical,
+					box-pack: justify,
+					box-align: start
+				), $version: 1);
+				@include flexbox((
+					display: flexbox,
+					flex-direction: column,
+					flex-pack: justify,
+					flex-align: start
+				), $version: 2);
+				@include flexbox((
+					display: flex,
+					flex-direction: column,
+					justify-content: space-between,
+					align-items: flex-start
+				));
+				
+				.item_subcategory{
+					margin: 0px 20px 20px 20px;
+					padding: 0px;
+					list-style-type: none; /* on annule la puce par défaut */
+					@include flexbox((
+						display: box,
+						box-orient: horizontal,
+						box-pack: center,
+						box-align: center
+					), $version: 1);
+					@include flexbox((
+						display: flexbox,
+						flex-direction: row,
+						flex-pack: center,
+						flex-align: center
+					), $version: 2);
+					@include flexbox((
+						display: flex,
+						flex-direction: row,
+						justify-content: center,
+						align-items: center
+					));
+				
+					.logo_croix{
+						height: 10px;
+						width: 10px;
+						position: relative;
+						cursor: pointer;
+						@include transition-property(transform);
+						@include transition-duration(0.7s);
+						
+						&:hover{
+							@include transform(matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0));
+						}
+						/*matrix(0,-0.05932203,0.05932203,0,3.3885919,24.566556) - croix tournée*/
+						/*matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574) - croix droite*/
+							
+						.svg-logo_croix {
+							position: absolute;
+							top: 0px;
+							left: 0px;
+							right: 0px;
+							height: 100%;
+							width: 100%;
+							fill: $colorTheme;
+						}
+					}
+										
+					.subtitre_tab{
+						font-size : 0.8em;
+						margin-left: 10px;
+						cursor: pointer;
+						color: $colorTheme;
+						border-bottom: 1px solid $colorBackground;
+						@include transition-property(border-bottom);
+						@include transition-duration(0.5s);
+					}
+					
+					.select_tab{
+						border-bottom: 1px solid $colorTheme;
+					}
+				}
+			}
+		}
+	}
+	section{
+		@include flexbox((
+			flex-grow: 1
+		), $version: 1);
+		@include flexbox((
+			flex-grow: 1
+		), $version: 2);
+		@include flexbox((
+			flex-grow: 1
+		));
+	}
+}
+
+

@@ -1,0 +1,88 @@
+@import "_couleurs.scss";
+@import "compass/css3/flexbox";
+@import "compass/css3/box-shadow";
+
+header{
+	z-index: 999;
+	background: #ffffff;
+	opacity: 0.95;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px;
+	padding : 0px 1em 0px 1em;
+	@include box-shadow(2px 0px 5px #bcbcbc);
+	
+	nav{		
+		@include flexbox((
+			display: box,
+			box-orient: horizontal,
+			box-pack: justify,
+			box-align: center
+		), $version: 1);
+		@include flexbox((
+			display: flexbox,
+			flex-direction: row,
+			flex-pack: justify,
+			flex-align: center
+		), $version: 2);
+		@include flexbox((
+			display: flex,
+			flex-direction: row,
+			justify-content: space-between,
+			align-items: center
+		));
+		font-size : 1em;
+		width: 80%;
+		margin: 0px 5% 0px 5%;
+		height: 50px;
+		
+		.nav_titre{
+			font-family: 'Nova Round', cursive;
+			font-size : 1.8em;
+			a{
+				text-decoration: none;
+				color: $colorTheme;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+		ul{
+			@include flexbox((
+				display: box,
+				box-orient: horizontal,
+				box-pack: justify,
+				box-align: start
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: row,
+				flex-pack: justify,
+				flex-align: start
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: row,
+				justify-content: space-between,
+				align-items: flex-start
+			));
+			width: 60%;
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			li a{
+				text-decoration: none;
+				color: $colorTheme;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+#header_blank{
+	height: 50px;
+}

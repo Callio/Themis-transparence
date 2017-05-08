@@ -1,0 +1,117 @@
+/* line 4, ../sass/style_footer.scss */
+footer {
+  background: #f5fafb;
+  margin: 1em;
+  font-size: 0.8em;
+  padding: 15px 0px 15px 0px;
+}
+/* line 11, ../sass/style_footer.scss */
+footer #footer_container {
+  margin: auto;
+  width: 600px;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: justify;
+  -moz-box-align: start;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+  -webkit-box-align: start;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-pack: justify;
+  -ms-flex-align: start;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-between;
+  -webkit-align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* line 33, ../sass/style_footer.scss */
+footer #footer_container #left_side, footer #footer_container #right_side {
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-pack: start;
+  -moz-box-align: start;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: start;
+  -webkit-box-align: start;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
+  -ms-flex-pack: start;
+  -ms-flex-align: start;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/* line 53, ../sass/style_footer.scss */
+footer #footer_container #left_side h1, footer #footer_container #right_side h1 {
+  font-size: 1em;
+}
+/* line 57, ../sass/style_footer.scss */
+footer #footer_container #left_side a, footer #footer_container #right_side a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+/* line 64, ../sass/style_footer.scss */
+footer #footer_container #left_side .lien_email {
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: start;
+  -moz-box-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: start;
+  -webkit-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-direction: row;
+  -ms-flex-pack: start;
+  -ms-flex-align: center;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -webkit-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* line 85, ../sass/style_footer.scss */
+footer #footer_container #left_side .lien_email p {
+  padding: 0px 0px 0px 10px;
+}
+/* line 88, ../sass/style_footer.scss */
+footer #footer_container #left_side .lien_email .logo_contact {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 95, ../sass/style_footer.scss */
+footer #footer_container #left_side .lien_email .logo_contact .svg-logo_contact {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+}
+/* line 104, ../sass/style_footer.scss */
+footer #footer_container #left_side .lien_email .logo_contact a:hover {
+  opacity: 0.5;
+}
+/* line 111, ../sass/style_footer.scss */
+footer #footer_container #right_side p a:hover {
+  color: #01737e;
+  opacity: 0.5;
+}

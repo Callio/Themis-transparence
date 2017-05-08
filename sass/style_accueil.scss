@@ -1,0 +1,174 @@
+@import "_couleurs.scss";
+@import "compass/layout/stretching";
+@import "compass/css3";
+@import "compass/css3/flexbox";
+@import "compass/css3/background-size";
+
+#entete_accueil {
+	@include flexbox((
+		display: box,
+		box-orient: vertical,
+		box-pack: center,
+		box-align: center
+	), $version: 1);
+	@include flexbox((
+		display: flexbox,
+		flex-direction: column,
+		flex-pack: center,
+		flex-align: center
+	), $version: 2);
+	@include flexbox((
+		display: flex,
+		flex-direction: column,
+		justify-content: center,
+		align-items: center
+	));
+	background: url(img/tn_header_img_fond.jpg) center fixed;
+	@include background-size(cover);
+	@include stretch(1em, 1em, 1em, 1em);
+
+	#texte_entete_accueil{
+		@include flexbox((
+			display: box,
+			box-orient: vertical,
+			box-pack: center,
+			box-align: center
+		), $version: 1);
+		@include flexbox((
+			display: flexbox,
+			flex-direction: column,
+			flex-pack: center,
+			flex-align: center
+		), $version: 2);
+		@include flexbox((
+			display: flex,
+			flex-direction: column,
+			justify-content: center,
+			align-items: center
+		));
+		padding: 0px;
+		margin: 0px;
+		color: #ffffff;
+
+		h1 {
+			font-family: 'Nova Round', cursive;
+			font-size: 6em;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		p{
+			font-family: 'Nova Round', cursive;
+			font-size: 2em;
+			padding: 0px 0px 100px 0px;
+			margin: 0px;
+		}
+	}
+
+	#input_entete_accueil{
+		@include flexbox((
+			display: box,
+			box-orient: hotizontal,
+			box-pack: center,
+			box-align: center
+		), $version: 1);
+		@include flexbox((
+			display: flexbox,
+			flex-direction: row,
+			flex-pack: center,
+			flex-align: center
+		), $version: 2);
+		@include flexbox((
+			display: flex,
+			flex-direction: row,
+			justify-content: center,
+			align-items: center
+		));
+		padding: 0px;
+		margin: 0px;
+
+		#carre_entete_accueil{
+			position: relative;
+			@include flexbox((
+				display: box,
+				box-orient: vertical,
+				box-pack: center,
+				box-align: start
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: column,
+				flex-pack: center,
+				flex-align: start
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: column,
+				justify-content: center,
+				align-items: flex-start
+			));
+			input {
+				width: 500px;
+				height: 30px;
+				margin: 0px;
+				padding: 3px 15px 3px 15px;
+				border-radius: 5px 0px 0px 5px;
+				border: #ffffff 1px solid;
+				font-size: 1em;
+			}
+			ul {
+				position: absolute;
+				top:30px;
+				list-style-type: none;
+				margin:0px;
+				padding:7px 0px 0px 0px;
+				border-radius: 5px;
+				border: #ffffff 1px solid;
+				background: #ffffff;
+			}
+			ul li {
+				padding: 5px 15px 5px 15px;
+				height:20px;
+				width:500px;
+				cursor: pointer;
+			}
+			ul li:hover {
+				background: #ddd;
+			}
+			ul li:active, ul li.active {
+				background: #ddd;
+			}
+			div {
+				position: absolute;
+				color: #f6bdb1;
+				font-size: 0.8em;
+				top:30px;
+				margin:0px;
+				width:500px;
+				padding:5px 15px 5px 15px;
+				border-radius: 5px;
+				border: #ffffff 1px solid;
+				background: #ffffff;
+			}
+		}
+
+		#validation_entete_accueil{
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			padding: 3px;
+			margin: 0px;
+			border-radius: 0px 5px 5px 0px;
+			border: #ffffff 1px solid;
+			background: #ffffff;
+
+			svg {
+				fill: $colorPolice;
+			}
+		}
+	}
+}
+
+#entete_accueil_blank{
+	height: 700px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+        <meta name="description" content="Themis, pour une gestion financière saine des collectivités territoriales et un contrôle accru des citoyens."/>
+		<!--link rel="stylesheet" href="css/bootstrap.min.css"/--><!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/-->
+		<link rel="stylesheet" href="css/style_general.css"/>
+		<title>Themis | Améliorer sa gestion financière</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Nova+Round" rel="stylesheet">		
+		<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyAUuH_3tFkoxUmChix1wp7iGMQEoXi0psw",
+			authDomain: "themis-4b204.firebaseapp.com",
+			databaseURL: "https://themis-4b204.firebaseio.com",
+			storageBucket: "themis-4b204.appspot.com",
+			messagingSenderId: "650703379513"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		<script src="lib/jquery-3.1.1.min.js"></script><!--script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script-->
+		<script src="lib/d3.js"></script><!--script src="https://d3js.org/d3.v4.min.js"></script-->
+    </head>
+	<body ng-app="themis" ng-strict-di>
+		<ui-view>
+			<div>
+				<h2>Chargement...</h2>
+			</div>
+		</ui-view>
+		
+		<!-- Libs -->
+		<!--script src="lib/bootstrap.min.js"></script--><!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+		<script src="lib/angular.min.js"></script> <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script-->
+		<script src="lib/angular-ui-router.min.js"></script><!--script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script-->
+		
+		<!-- Main Site Module -->
+		<script src="src/themis.module.js"></script>
+		<script src="src/themis.component.js"></script>
+		
+		<!-- Common Module -->
+		<script src="src/common/common.module.js"></script>
+		<script src="src/common/data.service.js"></script>
+	
+		<!-- Public Module -->
+		<script src="src/public/public.module.js"></script>
+		<script src="src/public/public.routes.js"></script>
+		<script src="src/public/home/home.controller.js"></script>
+		<script src="src/public/page/data/item.controller.js"></script>
+		<script src="src/public/page/data/fiscalite.controller.js"></script>
+		<script src="src/public/page/data/dette.controller.js"></script>
+		<script src="src/public/page/data/comptes.controller.js"></script>
+
+		<!-- ADMIN SITE -->
+
+		<!--Application files -->
+
+	</body>
+</html>
+

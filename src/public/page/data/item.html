@@ -1,0 +1,65 @@
+<!--Include stylesheet specific to the item page-->
+<link rel="stylesheet" href="css/style_item.css">
+
+<div id="item_section" ng-cloak>
+	<nav>
+		<div id="item_colloc">
+			<h1>{{itemCtrl.nomColloc}}</h1>
+		</div>
+		<ul class="item_menu">
+			<li class="item_category">
+				<div class="logo_croix" ng-click="itemCtrl.developComptes()" ng-class="{croix_tourne : itemCtrl.croixComptes}">
+					<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="svg-logo_croix" version="1.1" viewBox="0 0 27.955148 27.955148">
+						<g transform="matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574)">
+							<polygon points="178.5,214.2 321.3,357 357,321.3 214.2,178.5 357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 "/>
+						</g>
+					</svg>
+				</div>
+				<div class="titre_tab" ng-click="itemCtrl.changeToComptes()" ng-class="{select_tab : itemCtrl.selectComptes}">Les comptes</div>
+			</li>
+			<ul class="item_submenu" ng-if="itemCtrl.categoryComptes">
+				<li class="item_subcategory">
+					<div class="logo_croix">
+						<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="svg-logo_croix" version="1.1" viewBox="0 0 27.955148 27.955148">
+							<g transform="matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574)">
+								<polygon points="178.5,214.2 321.3,357 357,321.3 214.2,178.5 357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 "/>
+							</g>
+						</svg>
+					</div>
+					<div class="subtitre_tab">La section de fonctionnement</div>
+				</li>
+				<li class="item_subcategory">
+					<div class="logo_croix">
+						<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="svg-logo_croix" version="1.1" viewBox="0 0 27.955148 27.955148">
+							<g transform="matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574)">
+								<polygon points="178.5,214.2 321.3,357 357,321.3 214.2,178.5 357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 "/>
+							</g>
+						</svg>
+					</div>
+					<div class="subtitre_tab">La section d'investissement</div>
+				</li>
+			</ul>
+			<li class="item_category">
+				<div class="logo_croix">
+					<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="svg-logo_croix" version="1.1" viewBox="0 0 27.955148 27.955148">
+						<g transform="matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574)">
+							<polygon points="178.5,214.2 321.3,357 357,321.3 214.2,178.5 357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 "/>
+						</g>
+					</svg>
+				</div>
+				<div class="titre_tab" ng-click="itemCtrl.changeToDette()" ng-class="{select_tab : itemCtrl.selectDette}">La dette</div>
+			</li>
+			<li class="item_category">
+				<div class="logo_croix">
+					<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" class="svg-logo_croix" version="1.1" viewBox="0 0 27.955148 27.955148">
+						<g transform="matrix(0.04194701,-0.04194701,0.04194701,0.04194701,-0.99750826,13.977574)">
+							<polygon points="178.5,214.2 321.3,357 357,321.3 214.2,178.5 357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 "/>
+						</g>
+					</svg>
+				</div>
+				<div class="titre_tab" ng-click="itemCtrl.changeToFiscalite()" ng-class="{select_tab : itemCtrl.selectFiscalite}">La fiscalité</div>
+			</li>
+		</ul>
+	</nav>
+	<section><ui-view></ui-view></section>
+</div>

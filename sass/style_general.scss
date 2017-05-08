@@ -1,0 +1,14 @@
+@import "_couleurs.scss";
+
+html, body
+{
+    font-family: 'Open Sans', Verdana, Arial, sans-serif;
+    color: $colorPolice;
+	margin: 0px;
+	padding: 0px;
+	font-size: 17px;
+}
+
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak {
+	display: none;
+}

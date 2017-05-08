@@ -1,0 +1,117 @@
+@import "_couleurs.scss";
+@import "compass/css3/flexbox";
+
+footer
+{
+	background : $colorBackground;
+	margin : 1em;
+	font-size : 0.8em;
+	padding : 15px 0px 15px 0px;
+	
+	#footer_container{
+		margin: auto;
+		width: 600px;
+		@include flexbox((
+			display: box,
+			box-orient: horizontal,
+			box-pack: justify,
+			box-align: start
+		), $version: 1);
+		@include flexbox((
+			display: flexbox,
+			flex-direction: row,
+			flex-pack: justify,
+			flex-align: start
+		), $version: 2);
+		@include flexbox((
+			display: flex,
+			flex-direction: row,
+			justify-content: space-between,
+			align-items: flex-start
+		));
+		
+		#left_side, #right_side {
+			@include flexbox((
+				display: box,
+				box-orient: vertical,
+				box-pack: start,
+				box-align: start
+			), $version: 1);
+			@include flexbox((
+				display: flexbox,
+				flex-direction: column,
+				flex-pack: start,
+				flex-align: start
+			), $version: 2);
+			@include flexbox((
+				display: flex,
+				flex-direction: column,
+				justify-content: flex-start,
+				align-items: flex-start
+			));
+			
+			h1 {
+				font-size: 1em;
+			}
+			
+			a{
+				text-decoration: none;
+				color: $colorPolice;
+			}
+		}
+		
+		#left_side{
+			.lien_email
+			{
+				@include flexbox((
+					display: box,
+					box-orient: horizontal,
+					box-pack: start,
+					box-align: center
+				), $version: 1);
+				@include flexbox((
+					display: flexbox,
+					flex-direction: row,
+					flex-pack: start,
+					flex-align: center
+				), $version: 2);
+				@include flexbox((
+					display: flex,
+					flex-direction: row,
+					justify-content: flex-start,
+					align-items: center
+				));
+				
+				p {
+					padding : 0px 0px 0px 10px;
+				}
+				.logo_contact {
+					height: 30px;
+					width: 30px;
+					position: relative;
+					margin: 0px;
+					padding:0px;
+					
+					.svg-logo_contact {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						right: 0px;
+						height: 100%;
+						width: 100%;
+					}
+					
+					a:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+		#right_side{
+			p a:hover {
+				color: $colorTheme;
+				opacity: 0.5;
+			}
+		}
+	}
+}

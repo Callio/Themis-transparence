@@ -1,0 +1,13 @@
+/* line 3, ../sass/style_general.scss */
+html, body {
+  font-family: 'Open Sans', Verdana, Arial, sans-serif;
+  color: #5a5a5a;
+  margin: 0px;
+  padding: 0px;
+  font-size: 17px;
+}
+
+/* line 12, ../sass/style_general.scss */
+[ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak {
+  display: none;
+}

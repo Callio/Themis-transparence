@@ -1,0 +1,19 @@
+<!--Include stylesheet specific to the public site-->
+<link rel="stylesheet" href="css/style_page.css">
+<link rel="stylesheet" href="css/style_header.css">
+
+<header ng-cloak>
+	<nav>
+		<div class="nav_titre"><a ui-sref="public.home">Themis</a></div>
+		<ul id="menu">
+			<li><a ui-sref="public.page.data">Les données</a></li>
+			<li><a ui-sref="public.page.ranking">Les classements</a></li>
+			<li><a ui-sref="public.page.solution">Les solutions</a></li>
+		</ul>
+	</nav>
+</header>
+
+<div id="header_blank" ng-cloak>
+</div>
+
+<ui-view></ui-view>
